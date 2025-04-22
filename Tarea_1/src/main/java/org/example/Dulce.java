@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class Dulce
+abstract class Dulce extends Producto
 {
     private int serie;
 

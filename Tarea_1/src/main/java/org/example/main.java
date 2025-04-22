@@ -10,12 +10,7 @@ public class main {
         Moneda m = null;
         Comprador c=null;
         m = new Moneda500();
-        c = new Comprador(m,661,exp);
-        System.out.println(c.queBebiste()+", "+c.cuantoVuelto());
-        c = new Comprador(m,661,exp);
-        System.out.println(c.queBebiste()+", "+c.cuantoVuelto());
-        m = new Moneda500();
-        c = new Comprador(m,661,exp);
+        c = new Comprador(m,1,exp);
         System.out.println(c.queBebiste()+", "+c.cuantoVuelto());
 
 

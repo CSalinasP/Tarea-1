@@ -2,16 +2,16 @@ package org.example;
 
 import java.util.ArrayList;
 
-class Deposito
+class Deposito<T>
 {
-    private ArrayList<Bebida> lista;
+    private ArrayList<Producto> lista;
 
     public Deposito()
     {
         lista = new ArrayList<>();
     }
 
-    public Bebida getBebida()
+    public Producto getBebida()
     {
         if (lista.size() > 0)
         {

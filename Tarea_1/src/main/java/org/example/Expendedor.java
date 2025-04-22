@@ -43,12 +43,12 @@ class Expendedor
         {
             if (cual == 1)
             {
-                aux = coca.getBebida();
+                aux = (Bebida)coca.getBebida();
             }
 
             else if (cual == 2)
             {
-                aux = sprite.getBebida();
+                aux = (Bebida)sprite.getBebida();
             }
 
             else
