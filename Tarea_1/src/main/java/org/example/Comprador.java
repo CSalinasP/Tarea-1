@@ -5,7 +5,7 @@ class Comprador {
     private String sonido;
     private int vuelto;
 
-    public Comprador(Moneda m, int cualBebida, Expendedor exp){
+    public Comprador(Moneda m, int cualProducto, Expendedor exp){
 
         if (m==null)
         {
@@ -13,7 +13,7 @@ class Comprador {
             vuelto = 0;
         }
 
-        else if (cualBebida<1 || cualBebida>2)
+        else if (cualProducto<1 || cualProducto>5)
         {
             sonido = null;
             vuelto = m.getValor();
@@ -21,11 +21,11 @@ class Comprador {
 
         else
         {
-            Bebida b = exp.comprarBebida(m,cualBebida);
+            Producto b = exp.comprarProducto(m,cualProducto);
 
             if (b != null)
             {
-                sonido = b.beber();
+                sonido = b.consumir();
 
                 vuelto = 0;
 
@@ -84,7 +84,7 @@ class Comprador {
 
     }
 
-    public String queBebiste() //String con el sonido de la Bebida: cocacola, sprite
+    public String queConsumiste() //String con el sonido de la Bebida: cocacola, sprite
     {
         return sonido;
 

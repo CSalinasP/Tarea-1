@@ -7,7 +7,7 @@ class Sprite extends Bebida
         super(numSerie);
     }
 
-    public String beber()
+    public String consumir()
     {
         return "sprite";
     }

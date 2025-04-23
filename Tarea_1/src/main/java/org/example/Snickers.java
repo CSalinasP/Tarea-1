@@ -7,7 +7,7 @@ class Snickers extends Dulce
         super(numSerie);
     }
 
-    public String comer()
+    public String consumir()
     {
         return "snickers";
     }

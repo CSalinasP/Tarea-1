@@ -4,52 +4,96 @@ class Expendedor
 {
     public static final int  COCA=1;
     public static final int  SPRITE=2;
+    public static final int  FANTA=3;
+    public static final int  SUPER8=4;
+    public static final int  SNICKERS=5;
 
     private Deposito coca;
     private Deposito sprite;
+    private Deposito fanta;
+    private Deposito super8;
+    private Deposito snickers;
     private DepositoM monedas;
     private int precio;
 
-    public Expendedor(int numBebidas, int precioBebidas)
+    public Expendedor(int numProductos, int precioProductos)
     {
         coca = new Deposito();
         sprite = new Deposito();
+        fanta = new Deposito();
+        super8 = new Deposito();
+        snickers = new Deposito();
         monedas = new DepositoM();
-        precio = precioBebidas;
+        precio = precioProductos;
 
-        for (int i=0;i<numBebidas;i++)
+        for (int i=0;i<numProductos;i++)
         {
             CocaCola c = new CocaCola(100+i);
-            coca.addBebida(c);
+            coca.addProducto(c);
         }
 
-        for (int i=0;i<numBebidas;i++)
+        for (int i=0;i<numProductos;i++)
         {
             Sprite s = new Sprite(200+i);
-            sprite.addBebida(s);
+            sprite.addProducto(s);
+        }
+
+        for (int i=0;i<numProductos;i++)
+        {
+            Fanta s = new Fanta(300+i);
+            fanta.addProducto(s);
+        }
+
+        for (int i=0;i<numProductos;i++)
+        {
+            Super8 s = new Super8(400+i);
+            super8.addProducto(s);
+        }
+
+        for (int i=0;i<numProductos;i++)
+        {
+            Snickers s = new Snickers(500+i);
+            snickers.addProducto(s);
         }
     }
 
-    public Bebida comprarBebida(Moneda m, int cual)
+    public Producto comprarProducto(Moneda m, int cual)
     {
         if (m == null)
         {
             return null;
         }
 
-        Bebida aux;
+        Producto aux;
 
         if (precio <= m.getValor())
         {
             if (cual == 1)
             {
-                aux = (Bebida)coca.getBebida();
+                aux = coca.getProducto();
             }
 
             else if (cual == 2)
             {
-                aux = (Bebida)sprite.getBebida();
+                aux = sprite.getProducto();
             }
+
+            else if (cual == 3)
+            {
+                aux = fanta.getProducto();
+            }
+
+            else if (cual == 4)
+            {
+                aux = super8.getProducto();
+            }
+
+            else if (cual == 5)
+            {
+                aux = snickers.getProducto();
+            }
+
+
 
             else
             {

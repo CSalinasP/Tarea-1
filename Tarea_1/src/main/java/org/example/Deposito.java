@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-class Deposito<T>
+class Deposito
 {
     private ArrayList<Producto> lista;
 
@@ -11,7 +11,7 @@ class Deposito<T>
         lista = new ArrayList<>();
     }
 
-    public Producto getBebida()
+    public Producto getProducto()
     {
         if (lista.size() > 0)
         {
@@ -25,7 +25,7 @@ class Deposito<T>
 
     }
 
-    public void addBebida(Bebida b)
+    public void addProducto(Producto b)
     {
         lista.add(b);
     }

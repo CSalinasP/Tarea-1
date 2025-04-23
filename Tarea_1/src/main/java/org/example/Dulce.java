@@ -14,5 +14,5 @@ abstract class Dulce extends Producto
         return serie;
     }
 
-    public abstract String comer();
+    public abstract String consumir();
 }

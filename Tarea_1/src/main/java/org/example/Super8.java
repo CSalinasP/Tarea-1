@@ -7,7 +7,7 @@ class Super8 extends Dulce
         super(numSerie);
     }
 
-    public String comer()
+    public String consumir()
     {
         return "super8";
     }
