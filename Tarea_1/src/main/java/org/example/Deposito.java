@@ -1,32 +1,26 @@
 package org.example;
-
 import java.util.ArrayList;
 
-class Deposito
-{
-    private ArrayList<Producto> lista;
+public class Deposito<T> {
+    private ArrayList<T> Generico;
 
-    public Deposito()
-    {
-        lista = new ArrayList<>();
+    public Deposito() {
+        Generico = new ArrayList<>();
     }
 
-    public Producto getProducto()
-    {
-        if (lista.size() > 0)
-        {
-            return lista.remove(0);
+    public void add(T generico) {
+        if (generico != null) {
+            Generico.add(generico);
         }
+    }
 
-        else
-        {
+    public T get() {
+        if (Generico.isEmpty()) {
             return null;
+        } else {
+            T aux = Generico.get(Generico.size() - 1);
+            Generico.remove(Generico.size() - 1);
+            return aux;
         }
-
-    }
-
-    public void addProducto(Producto b)
-    {
-        lista.add(b);
     }
 }

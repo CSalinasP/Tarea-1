@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class main {
     public static void main(String[] args)
     {
-
         Expendedor exp = new Expendedor(3,300);
         Moneda m = null;
         Comprador c=null;

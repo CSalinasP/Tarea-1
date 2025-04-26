@@ -2,18 +2,18 @@ package org.example;
 
 class Expendedor
 {
-    public static final int  COCA=1;
-    public static final int  SPRITE=2;
-    public static final int  FANTA=3;
-    public static final int  SUPER8=4;
-    public static final int  SNICKERS=5;
+    int cc = Enumeracion.COCACOLA.getTipo();
+    int sp = Enumeracion.SPRITE.getTipo();
+    int fan= Enumeracion.FANTA.getTipo();
+    int sup8 = Enumeracion.SUPER8.getTipo();
+    int snk = Enumeracion.SNICKER.getTipo();
 
-    private Deposito coca;
-    private Deposito sprite;
-    private Deposito fanta;
-    private Deposito super8;
-    private Deposito snickers;
-    private DepositoM monedas;
+    private Deposito<Producto> coca;
+    private Deposito<Producto> sprite;
+    private Deposito<Producto> fanta;
+    private Deposito<Producto> super8;
+    private Deposito<Producto> snickers;
+    private Deposito<Moneda> monedas;
     private int precio;
 
     public Expendedor(int numProductos, int precioProductos)
@@ -23,37 +23,37 @@ class Expendedor
         fanta = new Deposito();
         super8 = new Deposito();
         snickers = new Deposito();
-        monedas = new DepositoM();
+        monedas = new Deposito();
         precio = precioProductos;
 
         for (int i=0;i<numProductos;i++)
         {
             CocaCola c = new CocaCola(100+i);
-            coca.addProducto(c);
+            coca.add(c);
         }
 
         for (int i=0;i<numProductos;i++)
         {
             Sprite s = new Sprite(200+i);
-            sprite.addProducto(s);
+            sprite.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
             Fanta s = new Fanta(300+i);
-            fanta.addProducto(s);
+            fanta.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
             Super8 s = new Super8(400+i);
-            super8.addProducto(s);
+            super8.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
             Snickers s = new Snickers(500+i);
-            snickers.addProducto(s);
+            snickers.add(s);
         }
     }
 
@@ -68,29 +68,29 @@ class Expendedor
 
         if (precio <= m.getValor())
         {
-            if (cual == 1)
+            if (cual == cc)
             {
-                aux = coca.getProducto();
+                aux = coca.get();
             }
 
-            else if (cual == 2)
+            else if (cual == sp)
             {
-                aux = sprite.getProducto();
+                aux = sprite.get();
             }
 
-            else if (cual == 3)
+            else if (cual == fan)
             {
-                aux = fanta.getProducto();
+                aux = fanta.get();
             }
 
-            else if (cual == 4)
+            else if (cual == sup8)
             {
-                aux = super8.getProducto();
+                aux = super8.get();
             }
 
-            else if (cual == 5)
+            else if (cual == snk)
             {
-                aux = snickers.getProducto();
+                aux = snickers.get();
             }
 
 
@@ -104,7 +104,7 @@ class Expendedor
                     if (aux_valor > 0)
                     {
                         Moneda100 m100 = new Moneda100();
-                        monedas.addMoneda(m100);
+                        monedas.add(m100);
 
                         aux_valor = aux_valor - 100;
                     }
@@ -125,7 +125,7 @@ class Expendedor
                     if (aux_valor > precio)
                     {
                         Moneda100 m100 = new Moneda100();
-                        monedas.addMoneda(m100);
+                        monedas.add(m100);
 
                         aux_valor = aux_valor - 100;
                     }
@@ -139,7 +139,7 @@ class Expendedor
 
             else
             {
-                monedas.addMoneda(m);
+                monedas.add(m);
                 return null;
             }
 
@@ -147,13 +147,13 @@ class Expendedor
 
         else
         {
-            monedas.addMoneda(m);
+            monedas.add(m);
             return null;
         }
 
     }
     public Moneda getVuelto() //retorna una moneda desde el deposito de vuelto, hay que llamarla hasta que quede vacio
     {
-        return monedas.getMoneda();
+        return monedas.get();
     }
 }
