@@ -1,9 +1,7 @@
 package org.example;
 
-class CocaCola extends Bebida
-{
-    public CocaCola(int numSerie)
-    {
+class CocaCola extends Bebida {
+    public CocaCola(int numSerie){
         super(numSerie);
     }
 

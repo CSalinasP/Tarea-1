@@ -2,10 +2,9 @@ package org.example;
 
 class Moneda1000 extends Moneda
 {
-
-    public Moneda1000()
-    {
-
+    @Override
+    public Moneda getSerie() {
+        return super.getSerie();
     }
 
     public int getValor()

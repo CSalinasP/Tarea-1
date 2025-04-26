@@ -1,7 +1,6 @@
 package org.example;
 
-class Expendedor
-{
+class Expendedor {
     int cc = Enumeracion.COCACOLA.getTipo();
     int sp = Enumeracion.SPRITE.getTipo();
     int fan= Enumeracion.FANTA.getTipo();
