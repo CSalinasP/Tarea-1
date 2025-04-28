@@ -6,7 +6,7 @@ public class main {
     public static void main(String[] args)
     {
 
-        Expendedor exp = new Expendedor(3,300);
+        Expendedor exp = new Expendedor(3,Precio.CIEN,Precio.DOSCIENTOS,Precio.TRESCIENTOS,Precio.QUINIENTOS,Precio.MIL);
         Moneda m = null;
         Comprador c=null;
         m = new Moneda500();

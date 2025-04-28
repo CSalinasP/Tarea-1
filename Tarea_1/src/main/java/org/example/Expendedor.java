@@ -8,52 +8,60 @@ class Expendedor
     public static final int  SUPER8=4;
     public static final int  SNICKERS=5;
 
-    private Deposito coca;
-    private Deposito sprite;
-    private Deposito fanta;
-    private Deposito super8;
-    private Deposito snickers;
-    private DepositoM monedas;
-    private int precio;
+    private GDeposito<Producto> coca;
+    private GDeposito<Producto> sprite;
+    private GDeposito<Producto> fanta;
+    private GDeposito<Producto> super8;
+    private GDeposito<Producto> snickers;
+    private GDeposito<Moneda> monedas;
+    private int precioUno;
+    private int precioDos;
+    private int precioTres;
+    private int precioCuatro;
+    private int precioCinco;
 
-    public Expendedor(int numProductos, int precioProductos)
+    public Expendedor(int numProductos, Precio precioProductoUno, Precio precioProductoDos, Precio precioProductoTres, Precio precioProductoCuatro, Precio precioProductoCinco)
     {
-        coca = new Deposito();
-        sprite = new Deposito();
-        fanta = new Deposito();
-        super8 = new Deposito();
-        snickers = new Deposito();
-        monedas = new DepositoM();
-        precio = precioProductos;
+        coca = new GDeposito();
+        sprite = new GDeposito();
+        fanta = new GDeposito();
+        super8 = new GDeposito();
+        snickers = new GDeposito();
+        monedas = new GDeposito();
+        precioUno = precioProductoUno.getValor();
+        precioDos = precioProductoDos.getValor();
+        precioTres = precioProductoTres.getValor();
+        precioCuatro = precioProductoCuatro.getValor();
+        precioCinco = precioProductoCinco.getValor();
 
         for (int i=0;i<numProductos;i++)
         {
-            CocaCola c = new CocaCola(100+i);
-            coca.addProducto(c);
+            Producto c = new CocaCola(100+i);
+            coca.add(c);
         }
 
         for (int i=0;i<numProductos;i++)
         {
-            Sprite s = new Sprite(200+i);
-            sprite.addProducto(s);
+            Producto s = new Sprite(200+i);
+            sprite.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
-            Fanta s = new Fanta(300+i);
-            fanta.addProducto(s);
+            Producto s = new Fanta(300+i);
+            fanta.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
-            Super8 s = new Super8(400+i);
-            super8.addProducto(s);
+            Producto s = new Super8(400+i);
+            super8.add(s);
         }
 
         for (int i=0;i<numProductos;i++)
         {
-            Snickers s = new Snickers(500+i);
-            snickers.addProducto(s);
+            Producto s = new Snickers(500+i);
+            snickers.add(s);
         }
     }
 
@@ -65,32 +73,63 @@ class Expendedor
         }
 
         Producto aux;
+        int precio;
+
+        if (cual == 1)
+        {
+            precio = precioUno;
+        }
+
+        else if (cual == 2)
+        {
+            precio = precioDos;
+        }
+
+        else if (cual == 3)
+        {
+            precio = precioTres;
+        }
+
+        else if (cual == 4)
+        {
+            precio = precioCuatro;
+        }
+
+        else if (cual == 5)
+        {
+            precio = precioCinco;
+        }
+
+        else
+        {
+            return null;
+        }
 
         if (precio <= m.getValor())
         {
             if (cual == 1)
             {
-                aux = coca.getProducto();
+                aux = coca.get();
             }
 
             else if (cual == 2)
             {
-                aux = sprite.getProducto();
+                aux = sprite.get();
             }
 
             else if (cual == 3)
             {
-                aux = fanta.getProducto();
+                aux = fanta.get();
             }
 
             else if (cual == 4)
             {
-                aux = super8.getProducto();
+                aux = super8.get();
             }
 
             else if (cual == 5)
             {
-                aux = snickers.getProducto();
+                aux = snickers.get();
             }
 
 
@@ -104,7 +143,7 @@ class Expendedor
                     if (aux_valor > 0)
                     {
                         Moneda100 m100 = new Moneda100();
-                        monedas.addMoneda(m100);
+                        monedas.add(m100);
 
                         aux_valor = aux_valor - 100;
                     }
@@ -125,7 +164,7 @@ class Expendedor
                     if (aux_valor > precio)
                     {
                         Moneda100 m100 = new Moneda100();
-                        monedas.addMoneda(m100);
+                        monedas.add(m100);
 
                         aux_valor = aux_valor - 100;
                     }
@@ -139,7 +178,7 @@ class Expendedor
 
             else
             {
-                monedas.addMoneda(m);
+                monedas.add(m);
                 return null;
             }
 
@@ -147,13 +186,13 @@ class Expendedor
 
         else
         {
-            monedas.addMoneda(m);
+            monedas.add(m);
             return null;
         }
 
     }
     public Moneda getVuelto() //retorna una moneda desde el deposito de vuelto, hay que llamarla hasta que quede vacio
     {
-        return monedas.getMoneda();
+        return monedas.get();
     }
 }

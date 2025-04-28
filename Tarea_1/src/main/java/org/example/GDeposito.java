@@ -17,7 +17,8 @@ public class GDeposito<E> {
     public E get() {
         if (Generico.isEmpty()) {
             return null;
-        } else {
+        }
+        else {
             E aux = Generico.get(Generico.size() - 1);
             Generico.remove(Generico.size() - 1);
             return aux;
