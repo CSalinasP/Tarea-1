@@ -2,12 +2,6 @@ package org.example;
 
 class Expendedor
 {
-    public static final int  COCA=1;
-    public static final int  SPRITE=2;
-    public static final int  FANTA=3;
-    public static final int  SUPER8=4;
-    public static final int  SNICKERS=5;
-
     private GDeposito<Producto> coca;
     private GDeposito<Producto> sprite;
     private GDeposito<Producto> fanta;

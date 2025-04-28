@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class Moneda
+abstract class Moneda implements Comparable
 {
     public Moneda()
     {
@@ -12,7 +12,7 @@ abstract class Moneda
         return this;
     }
 
-    public abstract int getValor();
+    abstract public int getValor();
 
-
+    public abstract int compareTo();
 }

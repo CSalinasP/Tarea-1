@@ -5,7 +5,7 @@ class Comprador {
     private String sonido;
     private int vuelto;
 
-    public Comprador(Moneda m, int cualProducto, Expendedor exp){
+    public Comprador(Moneda m, Tipo cualProducto, Expendedor exp){
 
         if (m==null)
         {
@@ -13,7 +13,7 @@ class Comprador {
             vuelto = 0;
         }
 
-        else if (cualProducto<1 || cualProducto>5)
+        else if (cualProducto.getTipo()<1 || cualProducto.getTipo()>5)
         {
             sonido = null;
             vuelto = m.getValor();
@@ -21,7 +21,7 @@ class Comprador {
 
         else
         {
-            Producto b = exp.comprarProducto(m,cualProducto);
+            Producto b = exp.comprarProducto(m,cualProducto.getTipo());
 
             if (b != null)
             {
