@@ -1,14 +1,9 @@
 package org.example;
 
-abstract class Moneda implements Comparable
-{
-    public Moneda()
-    {
+abstract class Moneda implements Comparable {
+    public Moneda() {}
 
-    }
-
-    public Moneda getSerie()
-    {
+    public Moneda getSerie() {
         return this;
     }
 

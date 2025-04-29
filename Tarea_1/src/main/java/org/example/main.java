@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class main {
     public static void main(String[] args)
     {
-
         Expendedor exp = new Expendedor(3,Precio.CIEN,Precio.DOSCIENTOS,Precio.TRESCIENTOS,Precio.QUINIENTOS,Precio.MIL);
         Moneda m = null;
         Comprador c=null;
@@ -24,18 +23,5 @@ public class main {
         m = new Moneda1500();
         c = new Comprador(m,Tipo.SNICKERS,exp);
         System.out.println(c.queConsumiste()+", "+c.cuantoVuelto());
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
