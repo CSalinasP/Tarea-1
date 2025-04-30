@@ -3,7 +3,7 @@ package org.example;
 /**
  * Clase abstracta que representa un producto generico.
  * Esta clase sirve como base para otros productos parciculares como bebidas o dulces.
- * Todo producto debe tener un número de serie y debe poder consumirse de alguna manera.
+ *Todo producto debe tener un número de serie y debe poder consumirse de alguna manera.
  */
 public abstract class Producto {
     /**
