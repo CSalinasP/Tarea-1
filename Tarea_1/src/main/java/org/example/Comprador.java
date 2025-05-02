@@ -1,93 +1,71 @@
 package org.example;
 
 class Comprador {
-
     private String sonido;
     private int vuelto;
 
-    public Comprador(Moneda m, Tipo cualProducto, Expendedor exp){
+    public Comprador(Moneda m, Tipo cualProducto, Expendedor exp) throws Exepciones {
+        sonido = null;
+        vuelto = 0;
 
-        if (m==null)
-        {
-            sonido = null;
-            vuelto = 0;
+        int tipo;
+        if(cualProducto==null){
+            tipo = 0;
         }
+        else {tipo = cualProducto.getTipo();}
 
-        else if (cualProducto.getTipo()<1 || cualProducto.getTipo()>5)
-        {
-            sonido = null;
-            vuelto = m.getValor();
+        try{
+            Producto p = exp.comprarProducto(m,tipo);
         }
-
-        else
-        {
-            Producto b = exp.comprarProducto(m,cualProducto.getTipo());
-
-            if (b != null)
-            {
-                sonido = b.consumir();
-
-                vuelto = 0;
-
-                while (true)
-                {
-                    Moneda aux_vuelto = exp.getVuelto();
-
-                    if (aux_vuelto != null)
-                    {
-                        vuelto = vuelto + aux_vuelto.getValor();
-                    }
-
-                    else
-                    {
-                        break;
-                    }
-                }
-
-
+        catch (Exepciones e){
+            if (e instanceof PagoIncorrectoException) {
+                throw new PagoIncorrectoException();
+            } else if (e instanceof NoHayProductoException) {
+                throw new NoHayProductoException();
+            } else if (e instanceof PagoInsuficienteException) {
+                throw new PagoInsuficienteException();
             }
-
-            else
-            {
-                sonido = null;
-
-                vuelto = 0;
-
-                while (true)
-                {
+        }
+        finally {
+            Producto p = exp.comprarProducto(m,tipo);
+            if(p!=null){
+                sonido = p.consumir();
+                while (true) {
                     Moneda aux_vuelto = exp.getVuelto();
 
-                    if (aux_vuelto != null)
-                    {
+                    if (aux_vuelto != null) {
                         vuelto = vuelto + aux_vuelto.getValor();
                     }
 
-                    else
-                    {
+                    else {
                         break;
                     }
                 }
             }
 
+            else {
+                while (true) {
+                    Moneda aux_vuelto = exp.getVuelto();
 
+                    if (aux_vuelto != null) {
+                        vuelto = vuelto + aux_vuelto.getValor();
+                    } else {
+                        break;
+                    }
+
+                }
+            }
         }
-
-
-
-
-
     }
 
-    public int cuantoVuelto() //suma de la cantidad de todas las monedas de vuelto
+    //suma de la cantidad de todas las monedas de vuelto
+    public int cuantoVuelto()
     {
         return vuelto;
-
     }
 
-    public String queConsumiste() //String con el sonido de la Bebida: cocacola, sprite
-    {
+    //String con el sonido de la Bebida: cocacola, sprite
+    public String queConsumiste() {
         return sonido;
-
     }
-
 }

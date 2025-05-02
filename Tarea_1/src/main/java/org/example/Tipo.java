@@ -3,7 +3,11 @@ package org.example;
 /**Enumeracion que contiene los tipos de productos codificados como numero entero(int).
  */
 public enum Tipo {
-    COCA(1),SPRITE(2),FANTA(3),SUPER8(4),SNICKERS(5);
+    COCA(1),
+    SPRITE(2),
+    FANTA(3),
+    SUPER8(4),
+    SNICKERS(5);
 
     /**int para almacenar el numero entero para el tipo seleccionado.
      */

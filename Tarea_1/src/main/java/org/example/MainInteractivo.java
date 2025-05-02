@@ -9,13 +9,13 @@ public class MainInteractivo {
         /*Creacion de los objetos de clase Scanner, Expendedor y declaracion de las variables
         para los objetos de clase Moneda y Comprador y para las constantes de la enumeracion Tipo*/
         Scanner sc = new Scanner(System.in);
-        Expendedor exp = new Expendedor(100, Precio.CIEN,Precio.DOSCIENTOS,Precio.TRESCIENTOS,Precio.QUINIENTOS,Precio.MIL);
+        Expendedor exp = new Expendedor(100, Precio.CIEN, Precio.DOSCIENTOS, Precio.TRESCIENTOS, Precio.QUINIENTOS, Precio.MIL);
         Moneda m = null;
         Tipo tipoProducto = null;
 
         //Ciclo while que simula una serie de compras
-        Comprador c;
-        while(true){
+        Comprador c = null;
+        while (true) {
             /*Se ingresa una variable int para seleccionar el tipo de moneda a utilizar*/
             System.out.println("Ingresar Valor de la Moneda: ");
             int inputM = sc.nextInt();
@@ -41,16 +41,27 @@ public class MainInteractivo {
 
             /*Se crea el objeto de clase Comprador y se despliega el nombre del producto consumido
             y el valor asociado al vuelto*/
-            c= new Comprador(m, tipoProducto, exp);
-            System.out.println(c.queConsumiste());
-            System.out.println(c.cuantoVuelto());
-            System.out.println("\n");
+            try {c = new Comprador(m, tipoProducto, exp);}
+            catch (Exepciones e) {
+                if (e instanceof PagoIncorrectoException) {
+                    System.out.println("Error: El pago ingresado es incorrecto");
+                } if (e instanceof NoHayProductoException) {
+                    System.out.println("Error: No hay stock disponible del producto solicitado");
+                    if(m!=null){System.out.println("Vuelto: "+m.getValor());}
+                    else{System.out.println("Vuelto: "+ null);}
+                }
+                if (e instanceof PagoInsuficienteException) {
+                    System.out.println("Error: El pago es insuficiente");
+                    if(m!=null){System.out.println("Vuelto: "+m.getValor());}
+                    else{System.out.println("Vuelto: "+ null);}
+                }
+            }
 
             /*Se le da la opcion al usuario de terminar la compra mediante la palabra clave 'Fin'*/
             System.out.println("Ingresar 'Fin' para Finalizar");
             String inputF = sc.next();
             System.out.println("\n\n");
-            if (inputF.equals("Fin")){
+            if (inputF.equals("Fin")) {
                 break;
             }
         }

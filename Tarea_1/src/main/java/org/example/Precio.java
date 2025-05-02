@@ -3,7 +3,12 @@ package org.example;
 /**Enumeracion que contiene los precios de los productos.
  */
 public enum Precio {
-    CIEN(100),DOSCIENTOS(200), TRESCIENTOS(300), QUINIENTOS(500), MIL(1000),MIL_QUINIENTOS(1500);
+    CIEN(100),
+    DOSCIENTOS(200),
+    TRESCIENTOS(300),
+    QUINIENTOS(500),
+    MIL(1000),
+    MIL_QUINIENTOS(1500);
 
     /**int para almacenar el valor del precio seleccionado.
      */
