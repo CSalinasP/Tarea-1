@@ -1,5 +1,11 @@
 package org.example;
 
+/**
+ * Clase que representa un expendedor con 5 depositos para distintos
+ * tipos de productos y un sexto para distintos tipos de moneda.
+ * Permite realizar compras de productos y retornar el vuelto de estas si es que hubiera
+ * @author Carlos Salinas
+ */
 class Expendedor
 {
     private GDeposito<Producto> coca;
@@ -13,6 +19,15 @@ class Expendedor
     private int precioTres;
     private int precioCuatro;
     private int precioCinco;
+
+
+    /**
+     * Constructor de la clase Expendedor que rellena sus depositos de productos
+     * @param numProductos entero que establece el numero de cada producto en su respectivo
+     * deposito.
+     * @param precioProductoUno ... constantes de la enumeracion Precio que establecen
+     * los precios de cada producto.
+     * */
 
     public Expendedor(int numProductos, Precio precioProductoUno, Precio precioProductoDos, Precio precioProductoTres, Precio precioProductoCuatro, Precio precioProductoCinco)
     {
@@ -54,6 +69,18 @@ class Expendedor
         }
     }
 
+    /**
+     * Simula varias situaciones de compra.
+     * En caso de que la moneda sea invalida tira la exepcion PagoIncorrectoException.
+     * En caso de que no haya Stock del producto tira la exepcion NoHayProductoException y almacena la moneda de pago
+     * en el deposito de monedas.
+     * En caso de que el valor de la moneda sea menor al precio del producto tira la exepcion PagoInsuficienteException
+     * y almacena la moneda de pago en el deposito de monedas.
+     * Salvo esos casos el metodo retorna la referencia al producto deseado y almacena en el
+     * deposito de monedas el vuelto correspondiente.
+     * @param m moneda con la que se pretende comprar un producto.
+     * @param cual entero que representa un tipo de producto.
+     */
     public Producto comprarProducto (Moneda m, int cual) throws Exepciones {
         if (m == null) {
             throw new PagoIncorrectoException();
@@ -142,17 +169,19 @@ class Expendedor
 
             else {
                 monedas.add(m);
-                return null;
+                throw new NoHayProductoException();
             }
         }
-
         else {
             monedas.add(m);
             throw new PagoInsuficienteException();
         }
     }
 
-    //retorna una moneda desde el deposito de vuelto, hay que llamarla hasta que quede vacio
+    /**
+     * Retorna el valor vuelto resultante de las compras.
+     * @return el valor del vuelto resultante de las compras.
+     */
     public Moneda getVuelto() {
         return monedas.get();
     }

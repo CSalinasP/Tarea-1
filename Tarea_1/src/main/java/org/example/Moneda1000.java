@@ -1,13 +1,22 @@
 package org.example;
 
+/**
+ * Clase que representa una moneda particular: Moneda de 1000 pesos.
+ * Hereda de la clase abstracta moneda y establece como se consume.
+ * @author Carlos Salinas
+ */
 class Moneda1000 extends Moneda
 {
 
+    /**Constructor por defecto de la clase Moneda1000*/
     public Moneda1000()
     {
 
     }
 
+    /**
+     *@return 1000 el valor de la moneda.
+     */
     public int getValor()
     {
         return 1000;
