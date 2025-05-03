@@ -6,6 +6,7 @@ package org.example;
  * @author Carlos Salinas
  */
 class CocaCola extends Bebida {
+
     /**
      * Constructor que crea una CocaCola con un numero de serie dado.
      *@param numSerie numero de serie unico de la CocaCola.
@@ -14,6 +15,13 @@ class CocaCola extends Bebida {
         super(numSerie);
     }
 
+    /**
+     * Retorna el numero de serie de la bebida.
+     * @return el número de serie.
+     */
+    public int getSerie() {
+        return super.getSerie();
+    }
     /**
      * Describe cómo se consume la CocaCola.
      * @return un String que  representa la accion de consumir la CocaCola".

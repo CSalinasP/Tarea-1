@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af6376e9-659d-4d50-9663-175899ed2adb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Bebida.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/CocaCola.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Comprador.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Dulce.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Exepciones.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Expendedor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Fanta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/GDeposito.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/MainInteractivo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda100.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda1000.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda1500.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda200.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda300.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Moneda500.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/NoHayProductoException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/PagoIncorrectoException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/PagoInsuficienteException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Precio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Producto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Snickers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Sprite.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Super8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Tipo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/example/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CocaCola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CocaCola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Fanta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Fanta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda100.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda100.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda1000.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda1000.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda1500.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda1500.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda200.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda200.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda300.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda300.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Moneda500.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Moneda500.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Snickers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Snickers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Super8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Super8.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2wADY9ZMIQxxOQCmqG8efveBZ7F" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MP.executor": "Run",
+    "Application.MainInteractivo.executor": "Run",
+    "Application.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af6376e9-659d-4d50-9663-175899ed2adb" name="Changes" comment="" />
+      <created>1745475534107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745475534107</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

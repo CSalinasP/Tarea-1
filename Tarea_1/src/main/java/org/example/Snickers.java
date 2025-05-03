@@ -16,6 +16,14 @@ class Snickers extends Dulce {
     }
 
     /**
+     * Retorna el numero de serie del Snickers.
+     * @return el número de serie.
+     */
+    public int getSerie() {
+        return super.getSerie();
+    }
+
+    /**
      * Describe cómo se consume el Snicker.
      * @return un String que  representa la accion de consumir el Snicker".
      */

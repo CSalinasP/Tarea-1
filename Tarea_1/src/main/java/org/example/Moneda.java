@@ -9,7 +9,7 @@ abstract class Moneda implements Comparable {
     public Moneda() {}
 
     /**
-     * Retorna el numero de serie de la bebida.
+     * Retorna el numero de serie de la Moneda.
      * @return la instancia del objeto actual.
      */
     public Moneda getSerie() {

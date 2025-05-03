@@ -15,6 +15,14 @@ class Moneda1000 extends Moneda
     }
 
     /**
+     * Retorna el numero de serie de la Moneda.
+     * @return la instancia del objeto actual.
+     */
+    public Moneda getSerie() {
+        return this;
+    }
+
+    /**
      *@return 1000 el valor de la moneda.
      */
     public int getValor()

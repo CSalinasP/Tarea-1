@@ -16,6 +16,14 @@ class Sprite extends Bebida {
     }
 
     /**
+     * Retorna el numero de serie de la bebida.
+     * @return el número de serie.
+     */
+    public int getSerie() {
+        return super.getSerie();
+    }
+
+    /**
      * Describe cómo se consume la Sprite.
      * @return un String que  representa la accion de consumir la Sprite".
      */

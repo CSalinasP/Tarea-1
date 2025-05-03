@@ -16,6 +16,14 @@ class Fanta extends Bebida {
     }
 
     /**
+     * Retorna el numero de serie de la bebida.
+     * @return el número de serie.
+     */
+    public int getSerie() {
+        return super.getSerie();
+    }
+
+    /**
      * Describe cómo se consume la Fanta.
      * @return un String que  representa la accion de consumir la Fanta".
      */
